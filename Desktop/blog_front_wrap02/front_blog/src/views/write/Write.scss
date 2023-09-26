@@ -1,0 +1,222 @@
+@import '/src/App.scss';
+
+.w_wrap{
+    width: 1220px;
+    margin: 150px auto;
+    font-family: 'Pretendard-Regular';
+    @media (max-width: $wrap-width) {
+        width: 720px;
+      }
+    @media (max-width: 720px) {
+        width: 520px;
+      }
+    @media (max-width: $mobile-width) {
+        width: 100%;
+        padding: 0 25px;
+      } 
+    .kate-select{ 
+        width: 278px;
+        position: relative;
+        @media (max-width: $mobile-width) {
+            width: 140px;
+          } 
+        >select{
+            border: 1px solid #CAD3DC;
+            padding: 10px;
+            width: 276px;
+            height: 58px;
+            font-size: 20px;
+            appearance: none;
+            color: #474D53;
+            letter-spacing: -3px;
+            @media (max-width: $mobile-width) {
+                width: 135px;
+                font-size: 15px;
+              } 
+        }
+        &::before{
+            position: absolute;
+            right: 21px;
+            top: 43%;
+            content: '';
+            display: inline-block;
+            width: 18px;
+            height: 11px;
+            background: url('../../../public/images/i_down.png');
+            background-size: cover;
+            @media (max-width: $mobile-width) {
+                width: 15px;
+                height: 9px;
+                right: 26px;
+              } 
+        }
+    }
+    
+    .title-input{
+        display: flex;
+        align-items: center;
+        margin-top: 40px;
+        width: 100%;
+        padding: 10px;
+        font-size: 18px;
+        >input{
+            border: none;
+            outline: none;
+            font-size: 36px;
+            width: 100%;
+            font-weight: bold;
+            @media (max-width: $mobile-width) {
+                font-size: 24px;
+              } 
+            &::placeholder{
+                color: #C1C9D1;
+            }
+        }
+    }
+
+    /*썸네일*/
+    .thum_wrap{
+        margin-top: 30px;
+        border-top: 1px solid #eeeeee;
+        @media (max-width: $mobile-width) {
+            text-align: center;
+            margin-top: 80px;
+          } 
+        // h2{
+        //     font-size: 32px;
+        //     font-weight: bold;
+        //     @media (max-width: $mobile-width) {
+        //         font-size: 24px;
+        //       } 
+        // }
+        .thum_cont{
+            position: relative;
+            padding-top: 40px;
+            margin-top: 20px;
+            width: 520px;
+            @media (max-width: $mobile-width) {
+                width: 100%;
+              }
+            .thumbnail-preview{
+                .no-thumbnail{
+                    display: inline-block;
+                    width: 398px;
+                    height: 198px;
+                    background: url('../../../public/images/i_no_thum.png') no-repeat;
+                    background-size: cover;
+                    @media (max-width: $mobile-width) {
+                        width: 362px;
+                        height: 180px;
+                      } 
+                }
+                .y-thumbnail{
+                    width: 520px;
+                    height: 195px;
+                    border: 2px solid #eee;
+                    border-radius: 5px;
+                    @media (max-width: $mobile-width) {
+                        width: 100%;
+                      }
+                    >img{
+                        width: 100%!important;
+                        height: 100%!important;
+                    }
+                    >button{
+                        position:absolute;
+                        top: 0;
+                        right: 0;
+                        color: #8E9BA8;
+                        font-size: 16px;
+                        span{
+                            border-bottom: 1px solid;
+                            padding-bottom: 2px;
+                            margin-right: 8px;
+                        }
+                    }
+                }
+            }
+            >input[type="file"] {
+                width: 398px;
+                height: 198px;
+                opacity: 0;
+                position: absolute;
+                top: 34px;
+                left: 0;
+                cursor: pointer;
+              }
+        }
+    }
+
+    .post_btn{
+        text-align: right;
+        margin: 30px 0; 
+        @media (max-width: $mobile-width) {
+            text-align: center;
+          } 
+        .btn_n{
+            display: inline-block;
+            width: 145px;
+            height: 59px;
+            background: #F2F6FA;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 3px;
+            text-align: center;
+            line-height: 3;
+            color: #000;
+            &:hover{
+                color: #fff;
+                background: #061A40
+                ;
+            }
+            &:last-child{
+                margin-left: 16px;
+            }
+        }           
+    }
+
+    /*태그*/
+    .tag-wrap{
+        display: flex;
+        align-items: center;
+        overflow-x: auto;
+        white-space: nowrap;
+        flex-wrap: nowrap;
+        min-height: 60px;
+        padding: 10px;
+        margin-bottom: 10px;
+        .hash{
+            display: inline-flex;
+            -webkit-box-align: center;
+            align-items: center;
+            background: #F2F6FA;
+            color: #0C58E1;
+            border-radius: 50px;
+            margin-right: 10px;
+            padding: 7px 16px;
+            cursor: pointer;
+            max-width: 100%;
+            white-space: nowrap;
+        }
+        >input{
+            display: inline-flex;
+            outline: none;
+            cursor: text;
+            font-size: 15px;
+            border: none;
+            line-height: 3;
+            &::placeholder{
+                color: #C1C9D1;
+            }
+        }
+    }
+}
+
+
+.ql-toolbar.ql-snow{
+    border: none!important;
+    border-top: 1px solid #eee!important;
+}
+.ql-toolbar.ql-snow + .ql-container.ql-snow{
+    border: none!important;
+}

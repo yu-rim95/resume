@@ -1,0 +1,114 @@
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+@import '/src/App.scss';
+
+/* Header.scss */
+.h_v1{
+    max-width: 1920px;
+    margin: 0 auto;
+    height: 91px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 55px;
+    position: fixed;
+    transition: transform 0.3s ease;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    font-family: 'KimjungchulGothic-Bold';
+    border: none;
+    background-color: #ffffff;
+    &.hidden {
+        transform: translateY(-100%);
+      }
+    @media (max-width: $mobile-width) {
+        padding: 0 15px;
+      }
+    nav {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .logo{
+            background-image: url('../../../public/images/logo_i_b.png');
+            width: 215px; 
+            height: 44px;
+       }   
+        .meun{
+        >a{
+            display: inline-block;
+            width: 113px;
+            height: 49px;
+            text-align: center;
+            line-height: 2.8;
+            color: #000;
+            font-weight: bold;
+            font-size: 18px;
+            &:hover{
+                color: #fff;
+                background-color: #061A40;
+                border-radius: 30px;
+                box-shadow: 0 0 3px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+            }
+            &.active{
+                color: #0C58E1;
+                font-weight: bold;
+                &:hover{
+                    color: #0C58E1;
+                    background-color: #fff;
+                    border-radius: none;
+                    box-shadow: none;
+                }
+            }            
+        }
+        }   
+        .hamburger-menu {
+          margin-top: 15px;
+          font-size: 35px;
+          cursor: pointer;
+          color: #082a6a;
+        }
+    }
+    .mobile-menu{
+        position: absolute;
+        bottom: 4px;
+        right: 0;
+        transform: translateY(103%);
+        background-color: #ffffffc9;
+        .meun{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column; /*수직 정렬*/
+            align-items: center;
+            justify-content: center;
+            >a{
+                display: inline-block;
+                width: 113px;
+                height: 49px;
+                text-align: center;
+                line-height: 2.8;
+                color: #000;
+                font-weight: bold;
+                font-size: 18px;
+                &:hover{
+                    color: #fff;
+                    background-color: #1B489A;
+                    border-radius: 30px;
+                    box-shadow: 0 0 3px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+                }
+                &.active{
+                    color: #0C58E1;
+                    font-weight: bold;
+                    &:hover{
+                        color: #0C58E1;
+                        background-color: #fff;
+                        border-radius: none;
+                        box-shadow: none;
+                    }
+                }            
+            }
+        } 
+    }
+
+}

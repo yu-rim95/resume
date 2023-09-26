@@ -1,0 +1,213 @@
+@import '/src/App.scss';
+
+.card_wrap{
+    max-width: 1220px;
+    height: 830px;
+    margin: 0 auto;
+    padding-top: 120px;
+    overflow: hidden;
+    @media (max-width: 720px) {
+        max-width: 720px;
+        height: 649px;
+        padding-top: 40px;
+      }
+      @media (max-width: $mobile-width) {
+        height: 391px;
+      }  
+    .inner_card1{
+        width: 100%;
+        height: 100%;
+        @media (max-width: 720px) {
+                padding: 0 20px;
+        }
+        h1{
+            margin-bottom: 30px;
+            font-family: 'TheJamsil5Bold';
+            font-size: 40px;
+            border-bottom: 1px solid #061A40;
+            padding-bottom: 10px;
+            @media (max-width: $mobile-width) {
+                font-size: 24px;
+                margin-bottom: 18px;
+              }
+        }
+        .card_article{
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 50px;
+            
+            @media (max-width: $mobile-width) {
+                margin-bottom: 18px;
+              }
+            .card_3{
+                width: 390px;
+                max-height: 524px;
+                position: relative;
+                border: 1px solid #eee;
+                @include box-shadow; 
+                &:nth-child(2){
+                    margin: 0 15px;
+                }
+                @media (max-width: 720px) {
+                    width: 50%;
+                    &:nth-child(2){
+                        margin: 0 10px;
+                    }
+                }
+                @media (max-width: $mobile-width) {
+                    max-height: 245px;
+                    &:nth-child(2){
+                        margin: 0 0 0 10px;
+                    }
+                    &:nth-child(3){
+                        display: none;
+                    }
+                  }
+                .card_img{
+                    height: 263px;
+                    padding: 10px;
+                    @media (max-width: 720px) {
+                        height: 170px;
+                    }
+                    @media (max-width: $mobile-width) {
+                        height: 122px;
+                      }
+                   >img{
+                    width: 100%;
+                    height: 100%;
+                   }
+                }
+                // 썸네일 있을때
+            .card_t_th{
+                height: 207px;
+                margin: 10px 25px;
+                font-family: 'NanumSquareNeo-Variable';
+                font-size: 18px;
+                @media (max-width: 720px) {
+                    margin: 14px;
+                    font-size: 18px;
+                    height: 130px;
+                  }
+                @media (max-width: $mobile-width) {
+                    height: 93px;
+                    margin: 14px;
+                    font-size: 14px;
+                  }
+                h2{
+                    @include text-ellipsis;
+                    -webkit-line-clamp: 1;
+                    font-size: 24px;
+                    margin-bottom: 10px;
+                    font-weight: 100;
+                    color: #333;
+                    @media (max-width: 720px) {
+                        font-size: 20px;
+                      }
+                    @media (max-width: $mobile-width) {
+                        font-size: 15px;
+                      }
+                }
+                p{
+                    @include text-ellipsis;
+                    -webkit-line-clamp: 5;
+                    height: 108px;
+                    margin-bottom: 10px;
+                    line-height: 1.2;
+                    text-align: justify;
+                    word-break: break-all;
+                    letter-spacing: -.025em;
+                    color: #555;
+                    @media (max-width: 720px) {
+                        height: 43px;
+                        -webkit-line-clamp: 2;
+                      }
+                    @media (max-width: $mobile-width) {
+                        -webkit-line-clamp: 2;
+                        height: 32px;
+                      }
+                }
+            }
+
+            // 썸네일 없을때
+            .card_t_tn{
+                height: 207px;
+                margin: 25px;
+                font-family: 'NanumSquareNeo-Variable';
+                font-size: 18px;
+                @media (max-width: 720px) {
+                    margin: 14px;
+                    font-size: 18px;
+                    height: 130px;
+                  }
+                @media (max-width: $mobile-width) {
+                    height: 245px;
+                    margin: 14px;
+                    font-size: 14px;
+                  }
+                h2{
+                    @include text-ellipsis;
+                    -webkit-line-clamp: 1;
+                    font-size: 24px;
+                    margin-bottom: 15px;
+                    font-weight: 100;
+                    color: #333;
+                    @media (max-width: 720px) {
+                        font-size: 20px;
+                         margin-bottom: 10px;
+                      }
+                    @media (max-width: $mobile-width) {
+                        font-size: 15px;
+                         margin-bottom: 10px;
+                      }
+                }
+                p{
+                    @include text-ellipsis;
+                    -webkit-line-clamp: 16;
+                    height: 346px;
+                    margin-bottom: 10px;
+                    line-height: 1.2;
+                    color: #555;
+                    text-align: justify;
+                    word-break: break-all;
+                    @media (max-width: 720px) {
+                        height: 218px;
+                        -webkit-line-clamp: 10;
+                      }
+                    @media (max-width: $mobile-width) {
+                        -webkit-line-clamp: 9;
+                        height: 151px;
+                      }
+                }
+            }
+            .card_i{
+                width: 100%;
+                justify-content: space-between;
+                display: flex;
+                align-items: center;
+                color: #414141;
+                font-size: 16px;
+                position: absolute;
+                bottom: 14px;
+                padding: 0 24px;
+                @media (max-width: 720px) {
+                    font-size: 14px;
+                    padding: 6px 14px;
+                  }
+                @media (max-width: $mobile-width) {
+                    bottom: 0;
+                    left: 4px;
+                    font-size: 12px;
+                    padding: 5px 8px;
+                  }
+                div{
+                    display: flex;
+                    font-family: 'NanumSquareNeo-Variable';
+                    button{
+                        margin-right: 5px;
+                    }
+                }
+            }
+            }
+        }
+    }
+}

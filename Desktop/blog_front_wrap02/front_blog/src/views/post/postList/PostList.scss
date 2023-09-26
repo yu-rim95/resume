@@ -1,0 +1,395 @@
+@import '/src/App.scss';
+
+.post_wrap{
+    margin: 100px 0 200px;
+    font-family: 'Pretendard-Regular';
+    overflow: hidden;
+    @media (max-width: $wrap-width) {
+        padding: 0 25px;
+    } 
+    @media (max-width: $mobile-width) {
+        padding: 0 25px;
+        margin: 160px 0;
+      } 
+    h1{
+        width: 1220px;
+        margin: 50px auto;
+        text-align: left;
+        font-family: "TheJamsil5Bold";
+        font-size: 40px;
+        border-bottom: 1px solid #061A40;
+        padding-bottom: 10px;
+        @media (max-width: $wrap-width) {
+            padding-left: 0;
+            width: 100%;
+        } 
+        @media (max-width: $mobile-width) {
+            font-size: 24px;
+            margin-bottom: 20px;
+        } 
+    }
+    .post_v1{
+        width: 1220px;
+        margin: 0 auto;
+        position: relative;
+        @media (max-width: $wrap-width) {
+            width: 100%;
+        } 
+        @media (max-width: $mobile-width) {
+            width: 100%;
+          } 
+        .post_s{
+            position: relative;
+            width: 100%;
+            .search-container{
+                .search-input{
+                    display: flex;
+                    align-items: center;
+                    max-width: 500px;
+                    width: 100%;
+                    padding: 10px;
+                    border-bottom: 2px solid #000;
+                    font-size: 18px;
+                    >input{
+                        border: none;
+                        outline: none;
+                        font-size: 18px;
+                        width: 100%;
+                        margin-left: 0.889em;
+                    }
+                    .i_search{
+                        width: 23px;
+                        height: 23px;
+                        display: inline-block;
+                        background: url('../../../../public/images/i_search.png') no-repeat;
+                    }
+                }
+                .search-result{
+                    margin-top: 5px;
+                    span{
+                        font-weight: bold;
+                    }
+                    .result_n{
+                        color: red;
+                    }
+                }
+            }
+            .post_btn{
+                position: absolute;
+                right: 0;
+                top: -13px;
+                @media (max-width: $mobile-width) {
+                    position: initial;
+                    margin-top: 20px;
+                } 
+                a{
+                    display: inline-block;
+                    width: 145px;
+                    height: 59px;
+                    background: #F2F6FA;
+                    font-size: 20px;
+                    font-weight: bold;
+                    border-radius: 3px;
+                    text-align: center;
+                    line-height: 3;
+                    &:hover{
+                        color: #fff;
+                        background: #061A40;
+                    }
+                    &:last-child{
+                        margin-left: 16px;
+                    }
+                    @media (max-width: $wrap-width) {
+                        width: 89px;
+                    } 
+                    @media (max-width: $mobile-width) {
+                        width: 70px;
+                        height: 42px;
+                        font-size: 15px;
+                    } 
+                }           
+            }
+        }
+        .crad_wrap{
+            width: 100%;
+            position: relative;
+            .card_1{
+                // width: 1220px;
+                height: 265px;
+                display: flex;
+                margin-top: 40px;
+                position: relative;
+                z-index: 9;
+                @include box-shadow; 
+                @media (max-width: $mobile-width) {
+                    display: inline-block;
+                    width: 100%;
+                    height: 270px;
+                  }  
+                a{
+                    display: inherit;
+                    .card_img{
+                        padding: 10px;
+                        >img{
+                            width: 386px;
+                            height: 243px;
+                            @media (max-width: 854px) {
+                                width: 253px;
+                              } 
+                            @media (max-width: $mobile-width) {
+                                width: 100%;
+                                height: 122px;
+                            }  
+                        }
+                    }
+                    // 썸네일 있을때
+                    .card_t_th{
+                        padding: 30px;
+                        font-family: 'NanumSquareNeo-Variable';
+                        font-size: 18px;
+                        @media (max-width: $mobile-width) {
+                            width: 100%;
+                            padding: 13px 11px;
+                            font-size: 14px;
+                          } 
+                        h2{
+                            @include text-ellipsis;
+                            -webkit-line-clamp: 1;
+                            font-size: 24px;
+                            margin-bottom: 15px;
+                            font-weight: 100;
+                            color: #333;
+                            @media (max-width: $mobile-width) {
+                                font-size: 20px;
+                                margin-bottom: 10px;
+                              }
+                        }
+                        p{
+                            @include text-ellipsis;
+                            -webkit-line-clamp: 5;
+                            height: 106px;
+                            margin-bottom: 10px;
+                            line-height: 1.2;
+                            text-align: justify;
+                            word-break: break-all;
+                            letter-spacing: -.025em;
+                            color: #555;
+                            @media (max-width: $mobile-width) {
+                                -webkit-line-clamp: 2;
+                                height: 32px;
+                              }
+                        }
+                    }
+                    // 썸네일 없을때
+                    .card_t_tn{
+                        width: 100%;
+                        padding: 30px 38px 30px 25px;
+                        font-family: 'NanumSquareNeo-Variable';
+                        font-size: 18px;
+                        @media (max-width: $mobile-width) {
+                            width: 100%;
+                            padding: 13px 11px;
+                            font-size: 14px;
+                          } 
+                        h2{
+                            @include text-ellipsis;
+                            -webkit-line-clamp: 1;
+                            font-size: 24px;
+                            margin-bottom: 15px;
+                            font-weight: 100;
+                            color: #333;
+                            @media (max-width: $mobile-width) {
+                                font-size: 20px;
+                                margin-bottom: 10px;
+                              }
+                        }
+                        p{
+                            @include text-ellipsis;
+                            -webkit-line-clamp: 6;
+                            height: 129px;
+                            margin-bottom: 10px;
+                            line-height: 1.2;
+                            text-align: justify;
+                            word-break: break-all;
+                            letter-spacing: -.025em;
+                            color: #555;
+                            @media (max-width: $mobile-width) {
+                                height: 168px;
+                                -webkit-line-clamp: 10;                        
+                            }  
+                        }
+    
+                    }
+                }
+            }
+            .card_icon{
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                position: absolute;
+                bottom: 17px;
+                right: 36px;
+                z-index: 99;
+                color: #414141;
+                font-size: 16px;
+                @media (max-width: $mobile-width) {
+                    right: 12px;
+                    bottom: 8px;
+                    font-size: 12px;
+                  } 
+                .card_u{
+                    padding-right: 20px;
+                    font-family: "NanumSquareNeo-Variable";
+                }
+                button{
+                    margin-right: 5px;
+                }
+            }
+        }
+        .kate_v1{
+            position: absolute;
+            top: -51px;
+            left: -25%;
+            width: 259px;
+            @media (max-width: 1835px) {
+                position: initial;
+                width: 100%;
+                margin-bottom: 50px;
+            }
+            @media (max-width: $mobile-width) {
+                width: 100%;
+                position: initial;
+                margin-bottom: 50px;
+            } 
+            >p{
+                width: 100%;
+                height: 68px;
+                padding: 23px 111px 23px 39px;
+                border-top: 2px solid #000;
+                border-bottom: 1px solid #BFCEE3;
+                font-size: 24px;
+                font-weight: bold;
+                @media (max-width: $mobile-width) {
+                    padding: 13px 0 0 17px;
+                    height: 50px;
+                    font-size: 18px;
+                  } 
+                .i_kate{
+                    margin-right: 8px;
+                    display: inline-block;
+                    background: url('../../../../public/images/i_kate.png');
+                    width: 18px; 
+                    height: 19px;
+                    @media (max-width: $mobile-width) {
+                        background-size: cover;
+                        width: 16px; 
+                        height: 16px;
+                      } 
+                }
+            }
+            ul{
+                background: #F6F9FC;
+                border-bottom: 1px solid #BFCEE3;
+                box-shadow: 0 4px 4px -4px #BFCEE3;
+                padding: 14px 0 30px;
+                @media (max-width: 1835px) {
+                    display: flex;
+                    flex-wrap: wrap;
+                    padding: 14px 0 14px;
+                }
+                @media (max-width: $mobile-width) {
+                    overflow-x: auto;
+                    white-space: nowrap;
+                    flex-wrap: nowrap;
+                    padding: 0;
+                    overflow-y: hidden;
+                } 
+                .kate_menu{
+                    // width: 100%;
+                    height: 52px;
+                    line-height: 2.5;
+                    padding: 0 16px;
+                    border-radius: 2px;
+                    cursor: pointer;
+                    font-size: 20px;
+                    color: #777;
+                    @media (max-width: 1835px) {
+                        // width: 253px;
+                    }
+                    @media (max-width: $wrap-width) {
+                        font-size: 18px;
+                        line-height: 3;
+                        padding: 0 16px;
+                        width: 179px;
+                    } 
+                    @media (max-width: $mobile-width) {
+                        height: 45px;
+                        line-height: 2.8;
+                        font-size: 16px;
+                      } 
+                    &.on{
+                        color: #000;
+                        background-color: #EEF3F8;
+                        margin: 0 auto;
+                        border-radius: 2px;
+                        @media (max-width: 1835px) {
+                            margin: 0;
+                            line-height: 2.5;
+                            padding: 0 16px;
+                        }
+                        @media (max-width: $wrap-width) {
+                            line-height: 3;
+                        } 
+                    }
+                }
+            }
+        }
+    }
+
+    /*글 목록 없을때 UI*/
+    .no_post{
+        text-align: center;
+        p{
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    }
+
+    /*임시글 UI*/
+    .crad_stash{
+        width: 1220px;
+        height: 187px;
+        margin: 10px auto;
+        position: relative;
+        padding: 30px 50px;
+        @include box-shadow; 
+        @media (max-width: $wrap-width) {
+            width: 100%;
+        } 
+        h2{
+            @include text-ellipsis;
+            -webkit-line-clamp: 1;
+            font-size: 24px;
+            margin-bottom: 15px;
+            font-weight: 100;
+            color: #333;
+        }
+        p{
+            @include text-ellipsis;
+            -webkit-line-clamp: 5;
+            height: 94px;
+            margin-bottom: 10px;
+            line-height: 1.2;
+            text-align: justify;
+            word-break: break-all;
+            letter-spacing: -.025em;
+            color: #555;
+        }
+        button{
+            position: absolute;
+            top: 15px;
+            right: 20px;        
+        }
+    }
+}

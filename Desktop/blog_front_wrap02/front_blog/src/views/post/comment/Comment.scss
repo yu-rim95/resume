@@ -1,0 +1,170 @@
+@import '/src/App.scss';
+
+.d2_comment_tit{
+    border-radius: 3px;
+    margin: 80px 0 16px;
+    color: #0c58e1;
+    border: 1px solid #eee;
+    display: inline-block;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #FAFBFD;
+    @media (max-width: $mobile-width) {
+        height: 38px;
+        font-size: 18px;
+      } 
+}
+
+.d2_comment{
+    .d2_comment_form{  
+        .cf_cont{
+            text-align: right;
+            .ps_box{
+                >textarea{
+                    width: 100%;
+                    height: 222px;
+                    background: #FAFBFD;
+                    outline: none;
+                    resize: none;
+                    border: 1px solid #eee;
+                    border-radius: 5px ;
+                    font-size: 18px;
+                    padding: 10px;
+                    font-family: "NanumSquareNeo-Variable";
+                }
+            }
+            .btn_b{
+                cursor: pointer;
+                width: 160px;
+                height: 60px;
+                margin-top: 20px;
+                color: #fff;
+                background: #1B489A;
+                border-radius: 5px;
+                font-size: 20px;
+                &:hover{
+                    background: #092D76;
+                }
+                @media (max-width: $mobile-width) {
+                    width: 100px;
+                    height: 45px;
+                    font-size: 15px;
+                    background: #092D76;
+                } 
+            }
+        }
+    }
+    .d2_comment_list{
+        margin-top: 43px;
+        border-top: 1px solid #BFCEE3 ;
+        .comment-row{
+            display: flex;
+            border-bottom: 1px solid #BFCEE3;
+            padding: 30px 49px;
+            @media (max-width: $mobile-width) {
+                padding: 30px 0;
+            } 
+            .cm_img{
+                img{
+                    width: 58px;
+                    height: 58px;
+                }
+                @media (max-width: $mobile-width) {
+                    display: none;
+                } 
+            }
+            .cm_cont{
+                width: 100%;
+                margin-left: 25px;
+                .cm-id{
+                    display: flex;
+                    align-items: center;
+                    .comment-id{
+                        font-size: 24px;
+                        font-weight: bold;
+                        margin-right: 25px;
+                        @media (max-width: $mobile-width) {
+                            font-size: 20px;
+                            margin-right: 15px;
+                        } 
+                    }
+                    .comment-date{
+                        font-size: 16px;
+                        color: #888C8F;
+                        @media (max-width: $mobile-width) {
+                            font-size: 14px;
+                        } 
+                    }
+                }
+                .comment-content{
+                    line-height: 1.2;
+                    font-size: 20px;
+                    padding: 25px 0;
+                    >textarea{
+                        width: 100%;
+                        height: 222px;
+                        background: #FAFBFD;
+                        outline: none;
+                        resize: none;
+                        border: 1px solid #DFE5EB;
+                        border-radius: 5px ;
+                        font-size: 18px;
+                        padding: 10px;
+                    }
+                    @media (max-width: $mobile-width) {
+                        font-size: 18px;
+                    } 
+                }
+                .comment-reply-form{
+                    >textarea{
+                        width: 100%;
+                        height: 222px;
+                        margin: 20px 0;
+                        background: #FAFBFD;
+                        outline: none;
+                        resize: none;
+                        border: 1px solid #DFE5EB;
+                        border-radius: 5px ;
+                        font-size: 18px;
+                        padding: 10px;
+                    }
+                    @media (max-width: $mobile-width) {
+                        font-size: 18px;
+                    }  
+                }
+                .reply-list{
+                    li{
+                        margin-top: 25px;
+                        border-top: 1px solid #BFCEE3;
+                        .reply_row{
+                            background: #F2F6FA;
+                            display: flex;
+                            margin: 10px 0;
+                        }
+                    }
+                }
+                .btn_g{
+                    width: 106px;
+                    height: 43px;
+                    margin-right: 15px;
+                    border-radius: 3px;
+                    background: #81858B;
+                    color: #fff;
+                    font-size: 16px;
+                    &:hover{
+                        background: #3F434A;
+                    }
+                    @media (max-width: $mobile-width) {
+                        width: 85px;
+                        height: 36px;
+                        margin-right: 5px;
+                        font-size: 15px;
+                        background: #3F434A;
+                    } 
+                }
+            }
+        }
+    }
+}
+
+

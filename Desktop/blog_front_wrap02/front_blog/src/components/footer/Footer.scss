@@ -1,0 +1,46 @@
+@import '/src/App.scss';
+
+.footer{
+    max-width: 1920px;
+    margin: 0 auto;
+    background: #131725;
+    color: #fff;
+    font-family: "NanumSquare", san-serif;
+    overflow: hidden;
+    .footer-inner{
+        width: 1220px;
+        height: 300px;    
+        margin: 0 auto;   
+        padding-top: 105px;
+        @media (max-width: $wrap-width) {
+            width: 100%;
+            padding: 100px 15px;
+          }
+        @media (max-width: $mobile-width) {
+            padding: 50px 15px;
+            height: 100%;
+          } 
+        a{
+            color: #fff!important;
+            font-size: 20px;
+            padding-right: 20px;
+            font-weight: bold;
+            @media (max-width: $mobile-width) {
+                font-size: 13px;
+              } 
+        }
+        p{
+            padding-top: 20px;
+            font-size: 16px;
+            @media (max-width: $wrap-width) {
+                line-height: 2;
+              }
+            @media (max-width: $mobile-width) {
+                line-height: 2;
+                font-size: 12px;
+                padding-bottom: 15px;
+              } 
+        }
+    }
+
+}

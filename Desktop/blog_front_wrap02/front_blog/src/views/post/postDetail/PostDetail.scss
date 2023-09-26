@@ -1,0 +1,151 @@
+@import '/src/App.scss';
+
+.postD_wrap{
+    margin: 186px auto;
+    overflow: hidden;
+    font-family: 'NanumSquareNeo-Variable';
+    @media (max-width: $wrap-width) {
+        width: 720px;
+        padding: 0 25px;
+        margin: 150px auto;
+    } 
+    @media (max-width: $mobile-width) {
+        width: 100%;
+        padding: 0 25px;
+    } 
+    .d1_wrap{
+        width: 1220px;
+        // height: 126px;
+        margin: 0 auto;
+        position: relative;
+        @media (max-width: $wrap-width) {
+            width: 100%;
+        } 
+        @media (max-width: $mobile-width) {
+            width: 100%;
+            // height: 99px;
+        } 
+        h1{
+            margin-bottom: 10px;
+            font-weight: 100;
+            font-size: 36px;
+            color: #333;
+            @media (max-width: $mobile-width) {
+                font-size: 28px;
+            } 
+        }
+        .d1_cont{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .d1_tit{
+                margin-top: 10px;
+                color: #888C8F;
+                font-size: 14px;
+            }
+            .d1_icon{
+                display: flex;
+                width: 147px;
+                justify-content: space-between;
+                margin-top: 22px;
+                @media (max-width: $mobile-width) {
+                    width: 105px;
+                  }
+                .link-icon {
+                    position: relative;
+                    display: inline-block;
+                    text-indent: -9999px;
+                    background-image: url('../../../../public/images/i_link.png');
+                    background-size: cover;
+                    width: 40px; 
+                    height: 40px;
+                    @media (max-width: $mobile-width) {
+                        width: 30px; 
+                        height: 30px;
+                      }
+                    &.on{
+                        &::before{
+                            display: inline-block;
+                            content: '';
+                            background: url('../../../../public/images/i_link_on.png') 100% no-repeat;
+                            width: 203px;
+                            height: 44px;
+                            position: absolute;
+                            top: -50px;
+                            left: 0;
+                            @media (max-width: $wrap-width) {
+                                background-size: 100%;
+                                width: 143px;
+                                height: 55px;
+                            } 
+                            @media (max-width: $mobile-width) {
+                                width: 125px;
+                                height: 69px;
+                            }
+                        }
+                    }
+                  }
+            }
+        }
+    }
+    .d2_wrap{
+        width: 1220px;
+        margin: 0 auto;
+        position: relative;
+        @media (max-width: $wrap-width) {
+            width: 100%;
+        } 
+        @media (max-width: $mobile-width) {
+            width: 100%;
+        } 
+        .d2_tag{
+            ul{
+                display: flex;
+                height: 68px;
+                align-items: center;
+                overflow-x: auto;
+                white-space: nowrap;
+                flex-wrap: nowrap;
+                li{
+                    background: #F2F6FA;
+                    color: #508af3;
+                    border-radius: 50px;
+                    margin-right: 10px;
+                    padding: 7px 16px;
+                }
+            }
+        }
+        .d2_cont{
+            margin-top: 10px;
+            line-height: 1.3;
+            p{
+                font-size: 20px;
+                min-height: 192px;
+                line-height: 1.5;
+                text-align: justify;
+                word-break: break-all;
+                letter-spacing: -0.025em;
+                color: #555;
+            }
+            .d2_i{
+                text-align: right;
+                margin-top: 100px;
+                >button{
+                    margin-right: 10px;
+                }
+            }
+        }
+        .d2_move{
+            height: 104px;
+            width: 100%;
+            margin-top: 185px;
+            display: flex;
+            align-items: center;
+            border-top: 1px solid #eee;
+            justify-content: space-between;      
+            @media (max-width: $mobile-width) {
+                height: 80px;
+            } 
+        }
+    }
+}
