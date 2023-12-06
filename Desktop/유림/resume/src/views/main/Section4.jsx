@@ -74,6 +74,18 @@ const Section4 = () => {
                         <Link className="caption" to="https://www.notion.so/01-React-915e2c447b0047b0886b0073af9118ad?pvs=4" target='blank'>노션으로 보기👉</Link>
                     </div>
                 </article>
+                <article>
+                    <div className="item">
+                        <div className="polaroid"><img src={process.env.PUBLIC_URL + '/images/img06.png'} alt='퍼블리셔 포트폴리오'/>
+                        <Link className="caption" to="https://publisherportpc.netlify.app/" target='blank'>저의 퍼블리셔 포트폴리오 입니다</Link>
+                        </div>
+                    </div>
+                    <div>
+                        <h3><strong>React</strong>를 이용한 저의 퍼블리셔 포트폴리오 페이지 입니다. 퍼블포트폴리오로 로딩페이지와 여러가지 <strong>애니메이션</strong>과 팝업, 탭등을 다양하게 구현해서 페이지를 구성해보았습니다!</h3>
+                        <p>모바일 반응형은 아직 미구현입니다 PC로만 확인해주세요! 추후 업데이트 예정입니다!</p>
+                        <Link className="caption" to="https://publisherportpc.netlify.app/" target='blank'>이미지 하단 텍스트 클릭시 사이트로 이동됩니다!👉</Link>
+                    </div>
+                </article>
             </div>
         </section>
     </>
